@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(50, 69, 70);
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 2000px;
+    /* Ensuring the page has enough height to scroll */
+}
+
+h1 {
+    margin: 10px;
+    color: rgb(218, 206, 46);
+}
+
+.box {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.3);
+    transform: translateX(400%);
+    /* Moves the boxes off-screen to the right */
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+    /* Moves even boxes off-screen to the left */
+}
+
+.box.show {
+    transform: translateX(0);
+    /* Brings the boxes back into view */
+}
